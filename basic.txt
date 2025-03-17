@@ -1,0 +1,28 @@
+Implicit,explicit data types.
+used in ml
+# Create a list of even numbers using list comprehension
+# Method 2: Using itertools.chain to flatten and print as 1D array
+import itertools
+
+flattened_array_2 = list(itertools.chain(*array_2d))
+print("\nFlattened 1D Array (using itertools.chain):")
+print(flattened_array_2)
+
+# Method 3: Using sum with an empty list to flatten and print as 1D array
+flattened_array_3 = sum(array_2d, [])
+print("\nFlattened 1D Array (using sum):")
+print(flattened_array_3)
+
+# Method 4: Manual flattening using nested loops
+flattened_array_4 = []
+for row in array_2d:
+    for item in row:
+        flattened_array_4.append(item)
+print("\nFlattened 1D Array (using nested loops):")
+print(flattened_array_4)
+
+# Bonus: Print as a single line of space-separated values
+print("\nFlattened array as space-separated values:")
+print(" ".join(map(str, flattened_array)))
+
+Lambda function
